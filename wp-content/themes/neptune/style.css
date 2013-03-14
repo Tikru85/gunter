@@ -398,7 +398,7 @@ body{
 		float:left;
 		width:600px;
 	}
-	
+
 #content #sidebar{
 	float:right;
 	width: 276px;
@@ -515,11 +515,18 @@ body{
 #  NAVIGATION
 *************************************************************************/
 #navigation{
-	height:32px;
-	width:995px;
+	height:30px;
+	width:980px;
 	position:relative;
 	z-index:3;
 	margin:0 auto;
+	background: url('images/brown/nav.gif') repeat-x;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #31140a;
+	overflow: hidden;
+	margin-bottom: 15px;
 }
 	#navigation ul{
 		margin:0;
@@ -528,29 +535,37 @@ body{
 		list-style-position:outside;
 		position:relative;
 		z-index:9999999;
-		top: 7px;
 		padding:0 23px;
 	}
 		/* 1st TIER (main) */
 		#navigation ul a{
 			display:block;
-			padding: 0 23px;
+			padding: 5px 38px;
 			text-decoration:none;
 			background:none;
-			font-size:17px;			font-weight:bold;
-			height:32px;			line-height:32px;
-			color: white;			margin-top:-8px;
-			text-transform: uppercase;
+			font-size:13px;			font-weight:normal;
+			height:32px;
+			color: white;
+		}
+		#navigation ul a:last-child{
+			padding: 5px 37px;
 		}
 		#navigation ul li a:hover{
 		}
 		#navigation ul li{
 			float:left;
-			position:relative;			padding-top:5px;			margin-top:-5px;
+			position:relative;
+			padding: 0px 10px 0 0;
+			background: url('images/brown/divider.gif') no-repeat top right;
+			float: left;
+		}
+		#navigation ul li:last-child{
+			padding: 0px;
+			background: none;
 		}
 		#navigation ul li.current_page_item,
 		#navigation ul li.current_page_ancestor{
-			background: url('images/nav_highlight.png');			padding-top:6px;			margin-top:-7px;			height:25px;
+			padding-top:6px;			margin-top:-7px;			height:25px;
 		}
 			#navigation ul li.current_page_item ul li,
 			#navigation ul li.current_page_ancestor ul li{
@@ -576,7 +591,7 @@ body{
 				top:69px;
 				left:0px;
 				border-bottom:none;
-				
+
 				margin:0;
 				padding:0;
 				list-style-type:none;
@@ -593,7 +608,7 @@ body{
 				opacity:0.96;
 			}
 				#navigation ul li ul li{
-					
+
 				}
 				#navigation ul li ul li:hover{
 					background: url(images/subnav_arrow.png) left center no-repeat;
@@ -819,7 +834,7 @@ body{
 						}
 						#sidebar ul li.widget_calendar #calendar_wrap table#wp-calendar tr td#next{
 						text-align:right;
-						}			
+						}
 /************************************************************************
 #  SIDEBAR END
 *************************************************************************/
@@ -960,7 +975,7 @@ ul.image-grid {
 			position:relative;
 			display:block;
 		}
-		
+
 		ul.image-grid li .boxlink a {
 			color:#eee;
 			text-align:center;
@@ -1053,7 +1068,7 @@ ul.image-grid {
 				text-align:center;
 				padding:6px;
 			}
-			
+
 	.post .readmore{
 		background: url(images/button_more.png) no-repeat bottom;
 		width:72px;
@@ -1417,7 +1432,7 @@ img#content-bottom{
 		color:#a0a0a0;
 		padding:5px;
 	}
-	
+
 #copyright{
 	position:relative;
 	text-align:left;

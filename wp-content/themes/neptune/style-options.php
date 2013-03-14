@@ -7,11 +7,11 @@
 	$design_option = get_option('design_option');
 	$home_page_option = get_option('home_page_option');
 	$portfolio_option = get_option('portfolio_option');
-	
+
 	//define variable
 	$theme = $_GET['theme'];
 	if ($theme != "") {$design_option['theme_color'] = $theme;}
-	
+
 	$banner = $_GET['banner'];
 	if ($banner != "") {$design_option['banner'] = $banner;}
 ?>
@@ -31,7 +31,7 @@ Theme Name: neptune
 	top:20px;
 	margin:0 auto;
 	width:979px;
-	
+
 }
 <?php } elseif ($design_option['banner'] == "2"){ ?>
 #banner-shadow{
@@ -83,7 +83,7 @@ body{
 }
 
 #navigation{
-	background: url('images/<?php echo $design_option['theme_color']; ?>/nav.png') bottom center no-repeat;
+	
 }
 
 #navigation #nav-left{
@@ -96,21 +96,21 @@ body{
 	background: url('images/<?php echo $design_option['theme_color']; ?>/nav_middle.png') bottom repeat-x;
 }
 #navigation ul li ul {
-	<?php if ($design_option['theme_color'] == "blue"){ ?>background: url(images/nav_dropdown.png) #1D2D41; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "bluegreen"){ ?>background: url(images/nav_dropdown.png) #1D3741; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "green"){ ?>background: url(images/nav_dropdown.png) #1E4030; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "orange"){ ?>background: url(images/nav_dropdown.png) #42311C; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "red"){ ?>background: url(images/nav_dropdown.png) #40211E; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "brown"){ ?>background: url(images/nav_dropdown.png) #3C3822; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "purple"){ ?>background: url(images/nav_dropdown.png) #36223C; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "pink"){ ?>background: url(images/nav_dropdown.png) #782D41; border:none; border-top:none;<?php } 
-	elseif ($design_option['theme_color'] == "tan"){ ?>background: url(images/nav_dropdown.png) #6A623A; border:none; border-top:none;<?php } 
+	<?php if ($design_option['theme_color'] == "blue"){ ?>background: url(images/nav_dropdown.png) #1D2D41; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "bluegreen"){ ?>background: url(images/nav_dropdown.png) #1D3741; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "green"){ ?>background: url(images/nav_dropdown.png) #1E4030; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "orange"){ ?>background: url(images/nav_dropdown.png) #42311C; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "red"){ ?>background: url(images/nav_dropdown.png) #40211E; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "brown"){ ?>background: url(images/nav_dropdown.png) #3C3822; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "purple"){ ?>background: url(images/nav_dropdown.png) #36223C; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "pink"){ ?>background: url(images/nav_dropdown.png) #782D41; border:none; border-top:none;<?php }
+	elseif ($design_option['theme_color'] == "tan"){ ?>background: url(images/nav_dropdown.png) #6A623A; border:none; border-top:none;<?php }
 	else{ ?>background: url(images/nav_dropdown.png) #2C2E32; <?php } ?>
 }
 
 #copyright{
 	<?php if ($design_option['theme_color'] == "tan"){ ?>color:#eee;<?php } ?>
-	
+
 }
 	#copyright #top-link{
 		<?php if ($design_option['theme_color'] == "tan"){ ?>color:#eee;<?php } ?>

@@ -1,0 +1,23 @@
+html, body, div { border:0; }
+
+#respond label{
+	position:relative;
+	bottom:15px;
+}
+
+#footer-container .FooterColumn li.categories h2{
+	margin-left:-16px;
+}
+
+#container #header #phone{
+	padding:7px 10px 1px 11px;
+}
+
+#breadcrumb-home{
+	padding-top:3px;
+}
+
+img#content-bottom{
+	position:relative;
+	top:51px;
+}

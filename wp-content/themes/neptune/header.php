@@ -38,6 +38,7 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 <!-- CSS -->
 <link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/style-jquery-ui-1.8.6.custom.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/style-prettyPhotoCSS.php" type="text/css" />
+<link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/css/rddm-desktop.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
 <link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/style-options.php<?php echo $theme; echo $banner; ?>" type="text/css" media="all" />
 <!--[if IE]>
@@ -46,6 +47,23 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 <!--[if IE 7]>
 <link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/style-ie7.css" type="text/css" media="all" />
 <![endif]-->
+ <!--[if (lt IE 8)]>
+            <link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/css/rddm-ie7.css" type="text/css" />
+        <![endif]-->
+        <!--[if (IE 8)]>
+            <link rel="stylesheet" href="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/css/rddm-ie8.css" type="text/css" />
+        <![endif]-->
+
+
+        <!-- Scripts -->
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/js/respond.min.js"></script>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if IE 7]>
+        <script type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-content/themes/<?php echo get_current_theme() ?>/js/rddm-ie7.js"></script>
+        <![endif]-->
 
 
 <!-- Javascript Files & Wordpress Stuff -->
@@ -59,14 +77,14 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 	TopUp.host = "<?php echo get_bloginfo('template_directory'); ?>";
 	TopUp.images_path = "/topup/images/top_up/";
 	TopUp.players_path = "/topup/players/";
-</script> 
+</script>
 
 
 <!-- Accordion -->
 <script type="text/javascript">
 	$(function(){
 		// Accordion
-		$(".accordion").accordion({ 
+		$(".accordion").accordion({
 			header: ".AccordionHeader",
 			autoHeight: false
 		});
@@ -79,7 +97,7 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 		$( ".tabs" ).tabs();
 	});
 </script>
-	
+
 <!-- Dialog Box -->
 <script>
 	$(function() {
@@ -88,7 +106,7 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 </script>
 
 
-	
+
 
 <!-- QS Javascript -->
 <script type="text/javascript">
@@ -101,17 +119,17 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 			}
 		};
 		$.extend(options, customOptions);
-	
+
 		$data = $(this);
 		arr = $data.get();
 		arr.sort(function(a, b) {
-			
+
 			var valA = options.by($(a));
 			var valB = options.by($(b));
 			if (options.reversed) {
-				return (valA < valB) ? 1 : (valA > valB) ? -1 : 0;				
-			} else {		
-				return (valA < valB) ? -1 : (valA > valB) ? 1 : 0;	
+				return (valA < valB) ? 1 : (valA > valB) ? -1 : 0;
+			} else {
+				return (valA < valB) ? -1 : (valA > valB) ? 1 : 0;
 			}
 		});
 		return $(arr);
@@ -120,7 +138,7 @@ if ($banner != "") {$banner = "?banner=" . $banner;}
 })(jQuery);
 
 $(function() {
-  
+
   var read_button = function(class_names) {
     var r = {
       selected: false,
@@ -136,54 +154,54 @@ $(function() {
     };
     return r;
   };
-  
+
   var determine_sort = function($buttons) {
     var $selected = $buttons.parent().filter('[class*="selected-"]');
     return $selected.find('a').attr('data-value');
   };
-  
+
   var determine_kind = function($buttons) {
     var $selected = $buttons.parent().filter('[class*="selected-"]');
     return $selected.find('a').attr('data-value');
   };
-  
+
   var $preferences = {
     duration: 800,
     easing: 'easeInOutQuad',
     adjustHeight: false
   };
-  
+
   var $list = $('#list');
   var $data = $list.clone();
-  
+
   var $controls = $('.splitter ul');
-  
+
   $controls.each(function(i) {
-    
+
     var $control = $(this);
     var $buttons = $control.find('a');
-    
+
     $buttons.bind('click', function(e) {
-      
+
       var $button = $(this);
       var $button_container = $button.parent();
-      var button_properties = read_button($button_container.attr('class').split(' '));      
+      var button_properties = read_button($button_container.attr('class').split(' '));
       var selected = button_properties.selected;
       var button_segment = button_properties.segment;
 
       if (!selected) {
 	$buttons.parent().removeClass('selected-0')<?php $portfolioCategories = $portfolio_option['portfolio_categories']; if ($portfolioCategories == "") {$portfolioCategories = 0;} else {$portfolioCategories = $portfolio_option['portfolio_categories'];} $d = 1; while ($d <= $portfolioCategories){?>.removeClass('selected-<?php echo $d; ?>')<?php $d++; }?>;
 	$button_container.addClass('selected-' + button_segment);
-	
+
 	var sorting_type = determine_sort($controls.eq(1).find('a'));
 	var sorting_kind = determine_kind($controls.eq(0).find('a'));
-	
+
 	if (sorting_kind == 'all') {
 	  var $filtered_data = $data.find('li');
 	} else {
 	  var $filtered_data = $data.find('li.' + sorting_kind);
 	}
-	
+
 	if (sorting_type == 'size') {
 	  var $sorted_data = $filtered_data.sorted({
 	    by: function(v) {
@@ -197,20 +215,20 @@ $(function() {
 	    }
 	  });
 	}
-	
+
 	$list.quicksand($sorted_data, $preferences);
-	
+
       }
-      
+
       e.preventDefault();
     });
-    
-  }); 
 
-  var high_performance = true;  
+  });
+
+  var high_performance = true;
   var $performance_container = $('#performance-toggle');
   var $original_html = $performance_container.html();
-  
+
   $performance_container.find('a').live('click', function(e) {
     if (high_performance) {
       $preferences.useScaling = false;
@@ -278,7 +296,7 @@ $(function() {
 	});
 	Cufon.replace('.FooterColumn h2', {
 		fontFamily: 'Cicle Semi'
-	});	
+	});
 
 </script>
 
@@ -320,8 +338,145 @@ $(function() {
 	</div>  <!-- header -->
 	<div id="wrapper-container">
 		<div id="navigation">
-			<?php wp_nav_menu(  array( 'theme_location' => 'header-menu' ));  ?> 
-			<?php //get_search_form();  ?> 
+
+
+
+                            <!-- Responsive Dropdown Menu panel start -->
+                            <nav class="rdd-menu">
+                                <ul>
+
+                                    <!-- Top level menu item #1 -->
+                                    <li class="active"><span>Home</span></li>
+
+
+                                    <!-- Top level menu item #2 (with submenu): start -->
+                                    <li class="parent" id="Showroom">
+                                       <a href="http://catalystcircle.com/gunter2/?page_id=4537">Showroom</a>
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+
+											<div class="colgroup col">
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+
+											</div>
+
+
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+
+                                    </li>
+                                    <!-- Top level menu item #2 (with submenu): end -->
+
+
+                                    <!-- Top level menu item #3 (with submenu): start -->
+                                    <li class="parent" id="Manufacturers">
+                                        <a href="http://catalystcircle.com/gunter2/?page_id=26">Manufacturers</a>
+
+
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+
+                                        <div class="colgroup col">
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+											<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+												<div>
+												<img src="<?php bloginfo('template_url') ?>/images/demo-1.gif" alt=""/>
+												<a href="#">Link</a>
+												</div>
+
+											</div>
+
+
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+
+                                    </li>
+                                    <!-- Top level menu item #3 (with submenu): end -->
+
+									   <!-- Top level menu item #3 (with submenu): start -->
+                                    <li class="parent" id="Manufacturers">
+                                       <a href="#">Videos</a>
+
+
+                                    </li>
+                                    <!-- Top level menu item #3 (with submenu): end -->
+
+
+
+                                    <!-- Top level menu item #4 (with submenu): start -->
+                                    <li class="parent" id="Projects">
+                                        <a href="http://catalystcircle.com/gunter2/?cat=12">Projects</a>
+
+
+
+                                    </li>
+                                    <!-- Top level menu item #4 (with submenu): end -->
+
+                                    <!-- Top level menu item #5 (with submenu): start -->
+                                    <li class="parent" id="Shop">
+                                        <a href="http://catalystcircle.com/gunter2/?page_id=1882">Shop</a>
+
+
+
+                                    </li>
+									 <li class="parent" id="Contact">
+                                       <a href="http://catalystcircle.com/gunter2/?page_id=1814">Contact</a>
+
+
+                                    </li>
+
+
+                                    <!-- Top level menu item #5 (with submenu): end -->
+
+                                </ul>
+                            </nav>
+
+
+
+			<?php //get_search_form();  ?>
 			<div class="Clear"></div>
 		</div>  <!-- navigation -->
 		<div id="wrapper">
+
+</ul>

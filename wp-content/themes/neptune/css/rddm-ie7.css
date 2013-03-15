@@ -1,0 +1,55 @@
+﻿/****************************
+ * Responsive Dropdown Menu *
+ * Specific styles for IE7  *
+ ****************************/
+
+
+
+
+.rdd-menu-wrapper a {
+    color: #797979;
+}
+
+/*
+ * Responsive Dropdown Menu: Dropdown panel styles
+ */
+
+.rdd-menu .submenu-panel {
+    display: none;
+}
+
+.rdd-menu li:hover > .submenu-panel {
+    padding-bottom: 32px;
+    display: block;
+}
+
+/* 
+ * Media Queries
+ */
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    .rdd-menu li:hover > .submenu-panel {
+        padding-bottom: 0;
+    }
+    
+    .rdd-menu ul ul li {
+        display: block;
+        width: 100%;
+        float: left;
+        line-height: 16px;
+    }
+    
+    .rdd-menu ul ul > li > a {
+        display: block;
+        float: left;
+        padding: 2px 0 2px 20px;
+        font-size: 11px;
+        color: #ababab;
+        text-transform: none;
+        text-align: left;
+        text-decoration: none;
+        width: auto;
+        height: auto;
+    }
+}

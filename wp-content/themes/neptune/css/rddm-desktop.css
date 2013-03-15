@@ -1,0 +1,256 @@
+﻿/********************************************
+ * Responsive Dropdown Menu
+ * Big screens (up to 959px width) stylesheet
+ *
+ * Contents:
+ * 1) Responsive Dropdown Menu: Wrapper styles
+ * 2) Responsive Dropdown Menu: Top level styles
+ * 3) Responsive Dropdown Menu: Dropdown panel styles
+ * 4) Responsive Dropdown Menu: Submenu columns
+ *
+ ********************************************/
+
+
+
+/***********************************
+ * Responsive Dropdown Menu: Wrapper styles *
+ ***********************************/
+
+.rdd-menu-holder {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+/*************************************
+ * Responsive Dropdown Menu: Top level styles *
+ *************************************/
+
+.rdd-menu > ul {
+    position: relative;
+    z-index: 100;
+}
+
+.rdd-menu > ul > li {
+    position: static;
+    width: auto;
+}
+
+
+
+/* Top level arrow (indicates the Submenu): position of the background image '35px' depends of the width of top level menu item (above). For better look it should be 15px less than top level menu item padding (by default: 50px - 15px = 35px). */
+.rdd-menu > ul > li.parent > a,
+.rdd-menu > ul > li.parent > span {
+    background-repeat: no-repeat;
+    background-position: 35px -106px;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.rdd-menu .ico-arrow.open,
+.rdd-menu .ico-arrow.close {
+    display: none;
+}
+
+.rdd-menu li:target .ico-arrow.open,
+.rdd-menu li:target .ico-arrow.close {
+    display: none;
+}
+
+
+
+/******************************************
+ * Responsive Dropdown Menu: Dropdown panel styles *
+ ******************************************/
+
+.rdd-menu .submenu-panel {
+    display: block;
+    padding: 0;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    z-index: 102;
+    opacity: 0;
+    overflow: hidden;
+}
+#navigation ul li:hover{ background: rgb(81, 34, 19);}
+
+.rdd-menu li:hover > .submenu-panel {
+    height: auto;
+    opacity: 1;
+    overflow: visible;
+}
+
+.rdd-menu ul ul > li > a {
+    padding: 6px 30px;
+    font-size: 11px;
+    text-transform: none;
+    text-align: left;
+    width: auto;
+    height: auto;
+    background-position: 10px -65px;
+    background-repeat: no-repeat;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.rdd-menu .submenu-panel h2,
+.rdd-menu .submenu-panel .h2 {
+    font-size: 17px;
+    line-height: 18px;
+    margin-bottom: 30px;
+}
+
+.rdd-menu .submenu-panel h3,
+.rdd-menu .submenu-panel .h3 {
+    font-size: 14px;
+    margin-bottom: 17px;
+    padding-bottom: 8px;
+}
+
+.rdd-menu .submenu-panel h4,
+.rdd-menu .submenu-panel .h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.rdd-menu .submenu-panel .single-list {
+    margin-top: 18px;
+}
+
+.rdd-menu .submenu-panel p,
+.rdd-menu .submenu-panel .p {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rdd-menu .submenu-panel p.last,
+.rdd-menu .submenu-panel .p.last {
+    margin-bottom: 0px;
+}
+
+.rdd-menu .submenu-panel .submenu-separator {
+    display: block;
+    float: left;
+    width: 94%;
+    margin: 0 3%;
+    height: 3px;
+}
+
+
+
+/************************************
+ * Responsive Dropdown Menu: Submenu columns *
+ ************************************/
+
+.rdd-menu .submenu-panel .colgroup {
+    position: relative;
+}
+
+.rdd-menu .submenu-panel .col {
+    display: block;
+    width: auto;
+    padding: 0 3%;
+    margin: 32px 0;
+}
+
+/* Single column layout */
+.rdd-menu .submenu-panel .single-col .col {
+    width: 94%;
+}
+
+/* Two columns layout */
+.rdd-menu .submenu-panel .two-cols .col {
+    width: 44%;
+}
+
+/* Three columns layout */
+.rdd-menu .submenu-panel .three-cols .col {
+    width: 27%;
+}
+
+/* Four columns layout */
+.rdd-menu .submenu-panel .four-cols .col {
+    width: 19%;
+}
+
+/* Column with map */
+.rdd-menu .submenu-panel .col.submenu-map-wrapper {
+    display: block;
+}
+
+.rdd-menu .submenu-panel .col .margin-25 {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+}
+
+/* Column with Submenu related info (headline, image and text): Static */
+.rdd-menu .submenu-panel .col.submenu-info {
+    display: block;
+    width: 27%;
+}
+
+.rdd-menu .submenu-info p {
+    font-size: 11px;
+    line-height: 22px;
+}
+
+.rdd-menu .submenu-info img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 17px;
+}
+
+/* Submenu with related info (headline, image and text): Dynamic */
+.rdd-menu .related-info {
+    width: 27%;
+    padding: 32px 0 32px 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* Using only CSS imposes certain restrictions: for correct work & better look of the menu please use images of the same size and the same amount of text */
+.rdd-menu .related-info .p {
+    font-size: 11px;
+    line-height: 22px;
+}
+
+.rdd-menu .related-info img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 17px;
+}
+
+.rdd-menu a:hover + .related-info {
+    display: block;
+}
+
+.submenu-panel { background: #3d180c; padding: 10px; color:#fff; -webkit-box-shadow: 0px 3px 14px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 3px 14px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 3px 14px rgba(50, 50, 50, 0.75);
+background: rgb(51, 21, 10);
+background: -moz-linear-gradient(90deg, rgb(51, 21, 10) 34%, rgb(81, 34, 19) 89%);
+background: -webkit-linear-gradient(90deg, rgb(51, 21, 10) 34%, rgb(81, 34, 19) 89%);
+background: -o-linear-gradient(90deg, rgb(51, 21, 10) 34%, rgb(81, 34, 19) 89%);
+background: -ms-linear-gradient(90deg, rgb(51, 21, 10) 34%, rgb(81, 34, 19) 89%);
+background: linear-gradient(180deg, rgb(51, 21, 10) 34%, rgb(81, 34, 19) 89%);
+border: 3px solid #351409;
+border-top: 0px;
+}
+.rdd-menu .submenu-panel .col { width: 500px;}
+.rdd-menu .submenu-panel .col img { border: 3px solid #502112;}
+.rdd-menu .submenu-panel .col div{ float: left; padding: 10px; }
+.submenu-panel .col a{ text-align: center; color: #fff; display: block; clear: both;}

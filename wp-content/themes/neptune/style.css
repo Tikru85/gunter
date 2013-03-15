@@ -525,7 +525,6 @@ body{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border: 1px solid #31140a;
-	overflow: hidden;
 	margin-bottom: 15px;
 }
 	#navigation ul{
@@ -538,18 +537,10 @@ body{
 		padding:0 23px;
 	}
 		/* 1st TIER (main) */
-		#navigation ul a{
-			display:block;
-			padding: 5px 38px;
-			text-decoration:none;
-			background:none;
-			font-size:13px;			font-weight:normal;
-			height:32px;
+		#navigation ul span, #navigation ul a{
 			color: white;
 		}
-		#navigation ul a:last-child{
-			padding: 5px 37px;
-		}
+
 		#navigation ul li a:hover{
 		}
 		#navigation ul li{
@@ -558,82 +549,16 @@ body{
 			padding: 0px 10px 0 0;
 			background: url('images/brown/divider.gif') no-repeat top right;
 			float: left;
-		}
-		#navigation ul li:last-child{
-			padding: 0px;
-			background: none;
-		}
-		#navigation ul li.current_page_item,
-		#navigation ul li.current_page_ancestor{
-			padding-top:6px;			margin-top:-7px;			height:25px;
-		}
-			#navigation ul li.current_page_item ul li,
-			#navigation ul li.current_page_ancestor ul li{
-				background: none;
-			}
-				#navigation ul li a ul li.current_page_item,
-				#navigation ul li ul li.current_page_item{
-					background: url(images/subnav_arrow.png) left center no-repeat;
-				}
-				#navigation ul li a ul li.current_page_item a,
-				#navigation ul li ul li.current_page_item a{
-					padding:3px 5px 2px 25px;
-				}
-		#navigation ul li:hover{
-			background: url('images/nav_highlight.png');
-		}
-			/* 2nd TIER */
-			#navigation ul li ul {
-				position:absolute;
-				display:none;
-				background: #35393E;
-				width:204px;
-				top:69px;
-				left:0px;
-				border-bottom:none;
+			display:block;
+			padding: 5px 38px;
+			text-decoration:none;
+			font-size:13px;			font-weight:normal;
+			height:21px;
 
-				margin:0;
-				padding:0;
-				list-style-type:none;
-				list-style-position:outside;
-				z-index:9999999;
-				bottom:none;
-				-webkit-border-bottom-right-radius: 10px;
-				-webkit-border-bottom-left-radius: 10px;
-				-moz-border-radius-bottomright: 10px;
-				-moz-border-radius-bottomleft: 10px;
-				border-bottom-right-radius: 10px;
-				border-bottom-left-radius: 10px;
-				filter:alpha(opacity=96);
-				opacity:0.96;
-			}
-				#navigation ul li ul li{
+		}
+		
 
-				}
-				#navigation ul li ul li:hover{
-					background: url(images/subnav_arrow.png) left center no-repeat;
-				}
-				#navigation ul li ul li a{
-					width:174px;
-					height:auto;
-					float:left;
-					font-size:12px;
-					padding:3px 15px 2px;
-					height:20px;
-					line-height:19px;
-					color:#e6e6e6;
-				}
-				#navigation ul li ul li a:hover{
-					background:none;
-					padding:3px 5px 2px 25px;
-				}
 
-	#navigation ul li:hover ul ul, #navigation ul li:hover ul ul ul, #navigation ul li:hover ul ul ul ul{
-		display:none;
-	}
-	#navigation ul li:hover ul, #navigation ul li li:hover ul, #navigation ul li li li:hover ul, #navigation ul li li li li:hover ul{
-		display:block;
-	}
 /************************************************************************
 #  NAVIGATION END
 *************************************************************************/

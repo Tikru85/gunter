@@ -1,0 +1,19 @@
+﻿/****************************
+ * Responsive Dropdown Menu *
+ * Specific styles for IE8  *
+ ****************************/
+
+
+
+
+/*
+ * Responsive Dropdown Menu: Dropdown panel styles
+ */
+
+.rdd-menu .submenu-panel {
+    display: none;
+}
+
+.rdd-menu li:hover > .submenu-panel {
+    display: block;
+}

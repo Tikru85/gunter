@@ -370,7 +370,7 @@ body{
 			z-index:2;
 		}
 		#container #wrapper-container #wrapper #nav-border{
-			background:#b7b6b6;
+
 			width:979px;
 			height:4px;
 			margin:0 auto;
@@ -1639,6 +1639,8 @@ img#content-bottom{
 .nivo-controlNav a.active {
 	background: url('images/banner_tab_on.png');
 }
+div.anythingSlider{ padding:0px!important;}
+div.anythingSlider.activeSlider .anythingWindow{ border-color: transparent!important;}
 /************************************************************************
 #  END NIVO SLIDER
 *************************************************************************/#bgc{	width:100%;	position:fixed;	top:0px;}#backgroundcontainer{	background:url('http://catalystcircle.com/gunter2/wp-content/uploads/2013/02/background.jpg');	background-position:top center;	width: 1425px;	height:1309px;	margin:0 auto;}.footbuttons{	float:left;	margin:15px 0 15px 21px;	width:139px;	height:90px;}#socialbox{	float:right;	margin-top:-15px;}.socialbuttons{	padding-left:10px;	float:left;}#quotebutton{	width: 335px;	height:50px;	margin:-10px auto 30px;}.erdynamicText{	font-style:italic;	text-align:center;	font-weight:lighter !important;}.dwuserEasyRotator .erACR div div{    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);	}

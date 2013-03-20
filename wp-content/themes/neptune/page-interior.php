@@ -13,7 +13,6 @@
 		<img src="http://placehold.it/900x500" width="900" height="500" />
 	</div>
 	<div id="slideshow-thumbnail" class="slider">
-		<a class="buttons prev" href="#">left</a>
 		<div class="viewport">
 			<ul class="overview">
 				<li><img src="http://placehold.it/200x200" width="200" height="200" /></li>
@@ -24,10 +23,8 @@
 				<li><img src="http://placehold.it/200x205" width="200" height="200" /></li>
 			</ul>
 		</div>
-		<a class="buttons next" href="#">right</a>
 	</div>
 	<div id="static-thumbnail" class="slider">
-		<a class="buttons prev" href="#">left</a>
 		<div class="viewport">
 			<ul class="overview">
 				<li><img src="http://placehold.it/200x200" width="200" height="200" /></li>
@@ -38,7 +35,6 @@
 				<li><img src="http://placehold.it/200x205" width="200" height="200" /></li>
 			</ul>
 		</div>
-		<a class="buttons next" href="#">right</a>
 	</div>
 	<script>
 		jQuery(document).ready(function($) {

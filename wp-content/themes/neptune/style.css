@@ -365,7 +365,7 @@ body{
 			width:995px;
 		}
 		#container #wrapper-container #wrapper{
-			background: url('images/bg_middle.png');
+
 			position:relative;
 			z-index:2;
 		}
@@ -383,11 +383,11 @@ body{
 
 #content{
 	margin:0 auto;
-	width:925px;
-	padding:0 27px;
+	width:984px;
+	padding:0 0;
 	position:relative;
 	z-index:10;
-	background: url(images/bg_content.png) top repeat-x;
+
 }
 
 #content #page{
@@ -556,7 +556,7 @@ body{
 			height:21px;
 
 		}
-		
+
 
 
 /************************************************************************
@@ -1564,6 +1564,25 @@ img#content-bottom{
 .nivo-controlNav a.active {
 	background: url('images/banner_tab_on.png');
 }
+
+/*****   interior-page    ****************************************************/
+
+.clear{ height: 0px; clear: both; overflow: hidden;}
+
+.interior-page .slider .viewport img { width: 102px;}
+.interior-page #slideshow-main-image{ width: 749px; float: left;}
+.interior-page .interior-info { float: right; width: 205px; background: #40291f; min-height: 503px; background: url('images/Interior-slides/sidebar-bg.png') repeat; color: #fff; font-family: 'Sorts Mill Goudy', serif; font-style: italic; padding: 30px 0 0 15px;}
+.interior-page .interior-info h3{ font-size: 14px;}
+.interior-page .interior-info P { color: #fff; font-style: italic; line-height: 30px; padding: 0 30px 20px 0}
+.interior-page .slider { height: 70px; overflow:hidden; background: url('images/Interior-slides/thumb-s-bg.png') repeat; padding: 10px; width: 425px; float: left; margin: 15px;}
+.interior-page .slider .viewport { float: left; width: 425px; height: 205px; overflow: hidden; position: relative; }
+.interior-page .slider .buttons { display: block; margin: 30px 10px 0 0; float: left; }
+.interior-page .slider .next { margin: 30px 0 0 10px;  }
+.interior-page .slider .disable { visibility: hidden; }
+.interior-page .slider .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+.interior-page .slider .overview li{ float: left; margin: 0 5px 0 0; width: 102px; cursor: pointer;}
+
+
 div.anythingSlider{ padding:0px!important;}
 div.anythingSlider.activeSlider .anythingWindow{ border-color: transparent!important;}
 /************************************************************************
